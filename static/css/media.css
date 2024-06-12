@@ -1,0 +1,8 @@
+@media screen and (max-width: 767px) {
+  .header-row {
+    padding: 30px;
+  }
+  nav li a {
+    font-size: 54px;
+  }
+}

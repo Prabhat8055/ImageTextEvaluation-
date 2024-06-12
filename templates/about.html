@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Text recognation perfomance evauation through image processing
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/about.css" />
+  </head>
+  <body>
+    <div id="trailer"></div>
+    <header>
+      <div class="header-row">
+        <div id="logo">
+          <img class="logo-img" src="/static/images/01.png" draggable="false" />
+          <img class="logo-img" src="/static/images/02.png" draggable="false" />
+          <img class="logo-img" src="/static/images/03.png" draggable="false" />
+          <img class="logo-img" src="/static/images/04.png" draggable="false" />
+        </div>
+        <button class="menu-toggle js-menu-btn">
+          <svg
+            viewBox="0 0 12 10"
+            class="hamburger"
+            hight="40px"
+            width="40px"
+            color="white"
+          >
+            <path d="M10 ,2 L2,2" class="bar-1"></path>
+            <path d="M2 ,5 L10,5" class="bar-2"></path>
+            <path d="M10 ,8 L2,8" class="bar-3"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="fullpage-menu">
+      <div class="fullpage-menu-inner">
+        <div class="menu-bg"></div>
+        <nav>
+          <ul class="main-menu">
+            <li>
+              <a href="/"><span data-clip="Home">Home</span></a>
+            </li>
+            <li>
+              <a href="/about"
+                ><span data-clip="About">About</span></a
+              >
+            </li>
+            <li>
+              <a href="/team"
+                ><span data-clip="Work">work</span></a
+              >
+            </li>
+            <li>
+              <a href="/about"
+                ><span data-clip="Contact">Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>
+          Welcome to <strong>Old Document Conversion Service</strong>! We
+          specialize in converting old, handwritten documents into clean,
+          digital formats.we bring history to life by transforming old,
+          handwritten documents into clear, legible text. Our passion lies in
+          preserving the past and making it accessible to everyone.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p class="animated-text">
+          At <strong>ImageTextEval</strong>, our mission is to preserve and make
+          accessible historical documents. We believe that every document tells
+          a story, and it's our responsibility to ensure that these stories are
+          not lost to time.We believe that every piece of history deserves to be
+          seen and understood. From cherished family letters to historical
+          manuscripts, each document holds a story waiting to be told. Our
+          mission is to bridge the gap between the past and present by
+          converting these invaluable handwritten treasures into readable
+          formats.
+        </p>
+
+        <div class="quote">
+          <p class="animated-text" style="color: #fda600">
+            "Preserving the past for the future."
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <p><strong>ImageTextEval</strong></p>
+          <p>
+            Demaprtment of instrumentation and control engineering,Vishwakarma
+            Institute Of Technology,Pune ,Bibvewadi,Pune-411037
+          </p>
+          <p>Phone: 9152371839</p>
+          <p>Email: prabhat.bhasme21@vit.edu</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // Trigger text animations when scrolled into view
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedTexts = document.querySelectorAll(".animated-text");
+        animatedTexts.forEach((text) => {
+          if (isElementInViewport(text)) {
+            text.classList.add("fadeInText");
+          }
+        });
+
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        document.addEventListener("scroll", function () {
+          animatedTexts.forEach((text) => {
+            if (isElementInViewport(text)) {
+              text.classList.add("fadeInText");
+            }
+          });
+        });
+      });
+    </script>
+    <script src="/static/js/simple.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

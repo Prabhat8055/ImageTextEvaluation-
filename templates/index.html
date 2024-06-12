@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+    <title>Text recognation perfomance evauation through image processing</title>
+</head>
+
+<body>
+    <!-- Preloader  -->
+    <div class="block-page">
+        <div class="block-page-container">
+            <div class="Loading"></div>
+        </div>
+    </div>
+    <!-- mouse following ball  -->
+    <div id="trailer"></div>
+    <!-- main  -->
+    <div class="wrapper">
+
+        <header>
+            <div class="header-row">
+                <div id="logo">
+                    <img class="logo-img" src="/static/images/01.png" draggable="false" />
+                    <img class="logo-img" src="/static/images/02.png" draggable="false" />
+                    <img class="logo-img" src="/static/images/03.png" draggable="false" />
+                    <img class="logo-img" src="/static/images/04.png" draggable="false" />
+
+                </div>
+                <button class="menu-toggle js-menu-btn">
+                    <svg viewBox="0 0 12 10" class="hamburger" hight="40px" width="40px">
+                        <path d="M10 ,2 L2,2" class="bar-1"></path>
+                        <path d="M2 ,5 L10,5" class="bar-2"></path>
+                        <path d="M10 ,8 L2,8" class="bar-3"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="fullpage-menu">
+            <div class="fullpage-menu-inner">
+                <div class="menu-bg"></div>
+                <nav>
+                    <ul class="main-menu">
+                        <li><a href="javascript:void(0)"><span data-clip="Home">Home</span></a></li>
+                        <li><a href="/about"><span data-clip="About">About</span></a></li>
+                        <li><a href="/team"><span data-clip="Work">Work</span></a></li>
+                        <li><a href="/about"><span data-clip="Contact">Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="scroller">
+
+            <section class="page1">
+
+                <div class="page1-flex-text">
+                    <h1 class="item1-h1">ImageTextEval</h1>
+                    <p class="item2-p1">In this project, the goal is to develop a system that can enhance and clear text
+                        from old historical images using image processing techniques implemented with OpenCV (Open
+                        Source Computer Vision Library) in Python. Historical documents often suffer from degradation
+                        over time, including faded text, stains, and noise, which can make the text difficult to read.
+                    </p>
+                </div>
+                <div class="images-magnet">
+                    <div class="magnets"><img src="/static/images/1.png" alt="s" style="width: 155px;"></div>
+                    <div class="magnets"><img src="/static/images/video.jpg" alt="" style="width: 155px;"></div>
+                    <div class="magnets"><img src="/static/images/test.jpg" alt="" style="width: 155px;"></div>
+                    <div class="magnets"><img src="/static/images/2.png" alt="" style="width: 155px;"></div>
+                </div>
+            </section>
+            <section class="page2">
+                <h1 class="anim item2-h1">What is Text Evauation</h1>
+                <p class="item2-p2 anim">Text evaluation involves the systematic assessment and analysis of written
+                    content to gauge its quality, relevance, and effectiveness for a given purpose or audience. This
+                    process encompasses various aspects, including evaluating the accuracy, clarity, coherence, and
+                    grammatical correctness of the text to determine if it meets desired standards. Additionally, text
+                    evaluation involves analyzing the content to assess its depth, coverage of topics, and
+                    informativeness. Sentiment analysis may also be part of text evaluation, helping to identify the
+                    emotional tone or sentiment conveyed by the text.
+                </p>
+                <div class="hover-image-revel anim">
+                    <!-- <audio id="heartbeat" src="assets/music/click-21156.mp3" autoplay="false">
+                    Your browser does not support the <code>audio</code> element.
+                </audio> -->
+                    <div class="link">
+                        <a href="">
+                            <p class="text-hover-sound">The OCR Process</p>
+                        </a>
+                        <div class="hover-reveal image01">
+                            <img src="/static/images/OCR.jpg" class="hidden-img" alt="">
+                        </div>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <p class="text-hover-sound">The refrence video</p>
+                        </a>
+                        <div class="hover-reveal image01">
+                            <img src="/static/images/video.jpg"
+                                class="hidden-img" alt="">
+                        </div>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <p class="text-hover-sound">Old documents History</p>
+                        </a>
+                        <div class="hover-reveal image01">
+                            <img src="/static/images/test.jpg" class="hidden-img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
+            <section class="page3" id="kaka">
+
+                <div class="container  card-container">
+                    <div class="card">
+                        <h1 class="heading1">Team</h1>
+                        <a class="project-img " id="team-page" href="/team"><img
+                                src="/static/images/project_img.png" style="  width: 300px ;height: 375px;"></a>
+
+                    </div>
+                    <div class="card">
+                        <h1 class="heading2">Project</h1>
+                        <a class="project-img" href="/project"><img src="/static/images/project_img.png" alt="asd"
+                                style="  width: 300px ;height: 375px;"></a>
+                    </div>
+                    <div class="card">
+                        <h1 class="heading3">About</h1>
+                        <a class="project-img" href="/about"><img src="/static/images/project_img.png" alt="asd"
+                                style="  width: 300px ;height: 375px;"></a>
+                    </div>
+                    <svg class="half" id="drawable-illustration" viewBox="0 0 1136 429" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 360.007C434.102 -254.651 955.367 22.761 1135 428" stroke="pink"
+                            stroke-width="4px" />
+                    </svg>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/simple.js"></script>
+    <!-- <script src="/utils/main.js"></script>
+    <script src="/utils/simple.js"></script> -->
+    <!-- library for page transition  -->
+
+
+
+
+
+</body>
+
+</html>
